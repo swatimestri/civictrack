@@ -77,7 +77,7 @@ export default function LandingPage() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-slate-900">Features for Your Community Objectives</h2>
           <p className="mt-2 text-sm text-slate-600">Everything needed for citizen reporting and authority response in one flow.</p>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {features.map((item) => (
               <Card key={item.title} className="p-6">
                 <item.icon className="h-6 w-6 text-indigo-600" />

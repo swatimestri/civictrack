@@ -129,7 +129,7 @@ export default function DashboardPage() {
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {topUrgent.map((issue) => (
               <IssueCard key={issue.id} issue={issue} isTrending />
@@ -141,7 +141,7 @@ export default function DashboardPage() {
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-foreground">All Reported Issues</h2>
         {loadingIssues ? (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {Array.from({ length: 6 }).map((_, index) => (
               <IssueCardSkeleton key={`all-skeleton-${index}`} />
             ))}
@@ -151,7 +151,7 @@ export default function DashboardPage() {
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="grid gap-6 md:grid-cols-2 xl:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {sortedFiltered.map((issue) => (
               <IssueCard key={issue.id} issue={issue} />

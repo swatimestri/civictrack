@@ -3,6 +3,7 @@ import {
   collection,
   doc,
   getDoc,
+  limit,
   onSnapshot,
   orderBy,
   query,
@@ -27,7 +28,7 @@ export function IssueProvider({ children }) {
       setFirestoreError(firebaseInitError || 'Firestore is not configured correctly.')
       return () => {}
     }
-    const q = query(collection(db, 'issues'), orderBy('createdAt', 'desc'))
+    const q = query(collection(db, 'issues'), orderBy('createdAt', 'desc'), limit(50))
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
