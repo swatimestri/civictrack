@@ -62,6 +62,8 @@ export function IssueProvider({ children }) {
         description: formData.description,
         category: formData.category,
         location: formData.location,
+        lat: formData.lat || null,
+        lng: formData.lng || null,
         imageUrl,
         status: 'pending',
         upvotes: 0,
@@ -113,7 +115,24 @@ export function IssueProvider({ children }) {
 
   async function updateIssueStatus(issueId, status) {
     if (!db) throw new Error(firebaseInitError || 'Firestore is not configured correctly.')
-    await updateDoc(doc(db, 'issues', issueId), { status })
+    const issueRef = doc(db, 'issues', issueId)
+    await updateDoc(issueRef, { status })
+    
+    try {
+      const snap = await getDoc(issueRef)
+      if (snap.exists() && snap.data().userId) {
+        await addDoc(collection(db, 'notifications'), {
+          userId: snap.data().userId,
+          message: `Your issue "${snap.data().title}" is now ${status.replace('_', ' ')}.`,
+          type: 'status_update',
+          link: `/issues/${issueId}`,
+          read: false,
+          createdAt: serverTimestamp()
+        })
+      }
+    } catch(err) {
+      console.error("Failed to send notification:", err)
+    }
   }
 
   const value = useMemo(
