@@ -24,7 +24,48 @@ Designed with a sleek, premium, **Linear-inspired UI/UX** (featuring dark modes,
 
 ## 📸 Application Preview
 
-![CivicTrack Application Preview](./public/civictrack_preview.png)
+### 🚀 Dashboard Overview
+<img width="1919" height="973" alt="Screenshot 2026-03-24 225741" src="https://github.com/user-attachments/assets/57547aee-dce0-4169-aca0-5b40a17e3a0c" />
+
+
+> Real-time overview of reported issues with status tracking, filtering, and community engagement.
+
+---
+
+### 📝 Report Issue (Real-Time GPS)
+<img width="1919" height="969" alt="Screenshot 2026-03-24 230407" src="https://github.com/user-attachments/assets/27ee3be2-0d52-4c4b-91d0-d711c97e5195" />
+
+
+> Users can report issues with image, description, category, and precise GPS-based location for accurate reporting.
+
+---
+
+### 🛠️ Authority Panel – Issue Management (Kanban)
+<img width="1916" height="919" alt="Screenshot 2026-03-24 230450" src="https://github.com/user-attachments/assets/f8b4d241-8ad0-457b-8e50-818899066369" />
+
+
+> Authorities manage issues using a Kanban workflow (Pending → In Progress → Resolved).
+
+---
+
+### 🗺️ Authority Panel – Live Issue Map
+<img width="1919" height="911" alt="Screenshot 2026-03-24 230521" src="https://github.com/user-attachments/assets/4437b3c6-4ab8-4c38-b782-a95cd2be5ec3" />
+
+
+> Visual representation of issues on a live map for better decision-making and faster response.
+
+---
+### 🛠️ Authority Panel – Analytics 
+<img width="1907" height="911" alt="Screenshot 2026-03-24 230502" src="https://github.com/user-attachments/assets/3d2c4a8b-92e3-45ef-a00c-7e8c963177e4" />
+
+
+> Authorities manage issues using a Analytics (Barchart and Piechart).
+
+---
+### 🛠️ User Profile View  
+<img width="1910" height="991" alt="Screenshot 2026-03-24 230614" src="https://github.com/user-attachments/assets/176ad4b8-b4ee-4c4d-aded-02da26a5f215" />
+
+> User Profile with the issues and dashboard.
 
 *(A look at the interactive dashboard where issues are tracked, managed, and gamified.)*
 
