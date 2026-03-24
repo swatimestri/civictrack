@@ -14,6 +14,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"Fira Code"', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -75,7 +79,7 @@ export default {
       },
       boxShadow: {
         soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-        glow: '0 0 20px rgba(59, 130, 246, 0.5)',
+        glow: '0 0 20px rgba(34, 197, 94, 0.5)',
       },
     },
   },

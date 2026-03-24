@@ -17,10 +17,14 @@ export default function SignupPage() {
     setError('')
     setLoading(true)
     try {
-      await signup(form.email, form.password)
+      await signup(form.email.trim(), form.password)
       navigate('/home')
     } catch (err) {
-      setError(err.message || 'Signup failed.')
+      if (err.code === 'auth/email-already-in-use') {
+        setError('Email is already registered. Please login.')
+      } else {
+        setError(err.message || 'Signup failed.')
+      }
     } finally {
       setLoading(false)
     }

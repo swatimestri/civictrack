@@ -18,10 +18,14 @@ export default function LoginPage() {
     setError('')
     setLoading(true)
     try {
-      await login(form.email, form.password)
+      await login(form.email.trim(), form.password)
       navigate(location.state?.from || '/home', { replace: true })
     } catch (err) {
-      setError(err.message || 'Login failed.')
+      if (err.code === 'auth/invalid-credential') {
+        setError('Invalid email or password. Please try again.')
+      } else {
+        setError(err.message || 'Login failed.')
+      }
     } finally {
       setLoading(false)
     }
